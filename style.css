@@ -1,0 +1,15 @@
+h1{
+    font-size: 60px;
+    text-align: center;
+    font-family: "Lucida Console";
+    color: skyblue;
+}
+
+#total {
+    font-size: 35px;
+    color: blueviolet;
+}
+body{
+    text-align: center;
+    background-image: url("images/2844.jpg");
+}
