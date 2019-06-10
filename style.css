@@ -9,6 +9,10 @@ h1{
     font-size: 35px;
     color: blueviolet;
 }
+#high  {
+    font-size: 35px;
+    color: brown;
+}
 body{
     text-align: center;
     background-image: url("images/2844.jpg");

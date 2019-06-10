@@ -5,7 +5,7 @@ function Snake() {
     this.yspeed = 0;
     this.total = 0;
     this.tail = [];
-
+    var high = 0;
     this.eat = function (pos) {
         var d = dist(this.x, this.y, pos.x, pos.y);
         if (d < 1) {
@@ -39,7 +39,12 @@ function Snake() {
         }
         if (this.total >= 1) {
             this.tail[this.total - 1] = createVector(this.x, this.y);
+            if (this.total > high){
+                high = this.total;
+
+            }
         }
+
 
         this.x = this.x + this.xspeed * scl;
         this.y = this.y + this.yspeed * scl;
@@ -47,13 +52,23 @@ function Snake() {
         this.x = constrain(this.x, 0, width - scl);
         this.y = constrain(this.y, 0, height - scl);
         document.getElementById("total").innerHTML="Current Total:" + s.total;
+        document.getElementById("high").innerHTML="Current High Score: " + s.total;
     }
 
     this.show = function () {
-        fill(255);
+        fill(255,0,0);
         for (var i = 0; i < this.tail.length; i++) {
             rect(this.tail[i].x, this.tail[i].y, scl, scl);
         }
+        var x = 5;
+        for (var j= 0; j<this.tail.length;j++){
+            if(this.tail.length%6==0){
+               x=x+5;
+               frameRate(10+x);
+            }
+        }
+
+
         rect(this.x, this.y, scl, scl);
 
 
