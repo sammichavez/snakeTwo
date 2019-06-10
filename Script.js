@@ -9,7 +9,6 @@ function setup() {
     frameRate(10);
     pickLocation();
 
-    document.getElementById("images").src = "images/download (1).jpeg";
     document.getElementById("image1").src = "images/tenor.gif";
 
 

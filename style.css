@@ -4,6 +4,12 @@ h1{
     font-family: "Lucida Console";
     color: skyblue;
 }
+h2{
+    font-size: 30px;
+    text-align: center;
+    font-family: "Lucida Console";
+    color: skyblue;
+}
 
 #total {
     font-size: 35px;
