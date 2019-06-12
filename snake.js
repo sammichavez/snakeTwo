@@ -1,4 +1,5 @@
 function Snake() {
+
     this.x = 0;
     this.y = 0;
     this.xspeed = 1;
@@ -6,6 +7,7 @@ function Snake() {
     this.total = 0;
     this.tail = [];
     var high = 0;
+
     this.eat = function (pos) {
         var d = dist(this.x, this.y, pos.x, pos.y);
         if (d < 1) {
@@ -52,7 +54,12 @@ function Snake() {
         this.x = constrain(this.x, 0, width - scl);
         this.y = constrain(this.y, 0, height - scl);
         document.getElementById("total").innerHTML="Current Total:" + s.total;
-        document.getElementById("high").innerHTML="Current High Score: " + s.total;
+        document.getElementById("high").innerHTML = "High Score: " + high;
+        if (high <= this.total) {
+            high = this.total;
+            document.getElementById("high").innerHTML = "High Score: " + high;
+        }
+
     }
 
     this.show = function () {

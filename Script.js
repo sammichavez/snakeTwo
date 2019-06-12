@@ -9,7 +9,7 @@ function setup() {
     frameRate(10);
     pickLocation();
 
-    document.getElementById("image1").src = "images/tenor.gif";
+
 
 
 }
